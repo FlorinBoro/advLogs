@@ -1,0 +1,16 @@
+paths:
+	-logsFolder: "./Logs/"
+	-fileInputs: "./InputFiles/"
+	-fileOutput: "./OutputFiles/"
+logLevels:
+	-dump: "DUMP"
+	-debug: "DEBUG"
+	-info: "BUSINESS"
+	-actions: "CALLS"
+	-warnings: "WARN"
+	-errors: "ERROR"
+logTypes:
+	-toScreen: "S"
+	-toFile: "F"
+	-noLogging: "X"
+	-toDatabase: "D"

@@ -1,0 +1,31 @@
+Logging levels description:
+
+	-dump: "DUMP"
+This level will output everything that has a "print" statement assigned to it, even if 
+it's got a "labeled" or not.
+ 
+	-debug: "DEBUG"
+This level will output everything that has one of these labels: DEBUG, Business, Calls, Warn, Error
+It is meant to provide extra technical logs, on top of what was provided by the lower levels.
+The difference between DEBUG and DUMP is that DEBUG tries to offer a balance between traceability 
+and usability, aiming for the purpose of being usable in production in extreme times of need.
+
+	-info: "BUSINESS"
+This level will output everything that has one of these labels: Business, Calls, Warn, Error
+It is meant to be used as a tag for everything related to the business logic (purpose) of the 
+application, with special focus on any logs that may be needed to generate statistics, graphs, reports.
+
+	-actions: "CALLS"
+This level will output everything that has one of these labels: Calls, Warn, Error.
+It is meant to tag every transition between different modules (parts) of the application (micro-processes, 3rd-party, different subroutines).
+
+	-warnings: "WARN"
+This level will output everything that has one of these labels: Warn, Error.
+Tag for everything that is returned when it wasn't expected, but does not affect the desired outcome. 
+This may be API messages about deprecated calls, preffered versions checks, etc
+
+	-errors: "ERROR"
+This level will output everything that has one of these labels: Error
+Tag for all errors. This log level will provide output only in case of issues that prevent 
+the program to provide the expected outcome.
+	
